@@ -82,8 +82,7 @@ namespace Calculator.Models
                     else
                     {
                         expression += $"-{mathCos.Groups[2].Value}sin(x)";
-                    }
-                    
+                    }                  
                 }
                 else
                 {
