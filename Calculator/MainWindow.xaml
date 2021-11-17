@@ -14,53 +14,44 @@
     </Window.DataContext>
 
     <Grid x:Name="MainGrid">
-        <Button x:Name ="b1"  Content="1" HorizontalAlignment="Left" Margin="7,67,0,0" VerticalAlignment="Top" Height="50" Width="50"/>
-        <Button x:Name ="b4" Content="4" HorizontalAlignment="Left" Margin="7,122,0,0" VerticalAlignment="Top" Height="50" Width="50"/>
-        <Button x:Name ="b7" Content="7" HorizontalAlignment="Left" Margin="7,177,0,0" VerticalAlignment="Top" Height="50" Width="50"/>
-        <Button x:Name ="bplus" Content="+" HorizontalAlignment="Left" Margin="7,232,0,0" VerticalAlignment="Top" Height="50" Width="50" FontSize="16"/>
-        <Button Content="2" HorizontalAlignment="Left" Margin="62,67,0,0" VerticalAlignment="Top" Height="50" Width="50"/>
-        <Button Content="5" HorizontalAlignment="Left" Margin="62,122,0,0" VerticalAlignment="Top" Height="50" Width="50"/>
-        <Button Content="8" HorizontalAlignment="Left" Margin="62,177,0,0" VerticalAlignment="Top" Height="50" Width="50"/>
-        <Button Content="3" HorizontalAlignment="Left" Margin="117,67,0,0" VerticalAlignment="Top" Height="50" Width="50"/>
-        <Button Content="6" HorizontalAlignment="Left" Margin="117,122,0,0" VerticalAlignment="Top" Height="50" Width="50"/>
-        <Button Content="9" HorizontalAlignment="Left" Margin="117,177,0,0" VerticalAlignment="Top" Height="50" Width="50"/>
-        <Button Content="-" HorizontalAlignment="Left" Margin="117,232,0,0" VerticalAlignment="Top" Height="50" Width="50" FontSize="16"/>
-        <Button Content="*" HorizontalAlignment="Left" Margin="171,67,0,0" VerticalAlignment="Top" Height="50" Width="108" FontSize="16"/>
-        <Button Content="/" HorizontalAlignment="Left" Margin="171,122,0,0" VerticalAlignment="Top" Height="50" Width="108" FontSize="16"/>
-        <Button Content="^" HorizontalAlignment="Left" Margin="171,177,0,0" VerticalAlignment="Top" Height="50" Width="108" FontSize="16"/>
-        <Button Content="Log10" HorizontalAlignment="Left" Margin="171,232,0,0" VerticalAlignment="Top" Height="50" Width="108" FontSize="16"/>
-        <Button Content="^1/2" HorizontalAlignment="Left" Margin="7,287,0,0" VerticalAlignment="Top" Height="50" Width="50" FontSize="16"/>
-        <Button Content="AC" HorizontalAlignment="Left" Margin="117,287,0,0" VerticalAlignment="Top" Height="50" Width="108" FontSize="16"/>
-        <Button Content="=" HorizontalAlignment="Left" Margin="395,287,0,0" VerticalAlignment="Top" Height="50" Width="219" FontSize="16"/>
-        <Button Content="Cos(x)" HorizontalAlignment="Left" Margin="283,67,0,0" VerticalAlignment="Top" Height="50" Width="108" FontSize="16"/>
-        <Button Content="Sin(x)" HorizontalAlignment="Left" Margin="283,122,0,0" VerticalAlignment="Top" Height="50" Width="108" FontSize="16"/>
-        <Button Content="Tg(x)" HorizontalAlignment="Left" Margin="283,177,0,0" VerticalAlignment="Top" Height="50" Width="108" FontSize="16"/>
-        <Button Content="Ctg(x)" HorizontalAlignment="Left" Margin="283,232,0,0" VerticalAlignment="Top" Height="50" Width="108" FontSize="16"/>
-        <Button Content="Sum" HorizontalAlignment="Left" Margin="395,67,0,0" VerticalAlignment="Top" Height="50" Width="108" FontSize="16"/>
-        <Button Content="x/Dx" HorizontalAlignment="Left" Margin="395,122,0,0" VerticalAlignment="Top" Height="50" Width="108" FontSize="16"/>
-        <Button Content="!" HorizontalAlignment="Left" Margin="395,177,0,0" VerticalAlignment="Top" Height="50" Width="108" FontSize="16"/>
-        <Button Content="asin(x)" HorizontalAlignment="Left" Margin="395,232,0,0" VerticalAlignment="Top" Height="50" Width="108" FontSize="16"/>
-        <Button Content="acos(x)" HorizontalAlignment="Left" Margin="507,67,0,0" VerticalAlignment="Top" Height="50" Width="108" FontSize="16"/>
-        <Button Content="atg(x)" HorizontalAlignment="Left" Margin="507,122,0,0" VerticalAlignment="Top" Height="50" Width="108" FontSize="16"/>
-        <Button Content="actg(x)" HorizontalAlignment="Left" Margin="507,177,0,0" VerticalAlignment="Top" Height="50" Width="108" FontSize="16"/>
-        <Button Content="exp" HorizontalAlignment="Left" Margin="507,232,0,0" VerticalAlignment="Top" Height="50" Width="108" FontSize="16"/>
+        <Button x:Name ="b1"  Content="1" HorizontalAlignment="Left" Margin="7,67,0,0" VerticalAlignment="Top" Height="50" Width="67"/>
+        <Button x:Name ="b4" Content="4" HorizontalAlignment="Left" Margin="7,122,0,0" VerticalAlignment="Top" Height="50" Width="67"/>
+        <Button x:Name ="b7" Content="7" HorizontalAlignment="Left" Margin="7,177,0,0" VerticalAlignment="Top" Height="50" Width="67"/>
+        <Button x:Name ="bplus" Content="+" HorizontalAlignment="Left" Margin="7,232,0,0" VerticalAlignment="Top" Height="50" Width="67" FontSize="16"/>
+        <Button Content="2" HorizontalAlignment="Left" Margin="80,67,0,0" VerticalAlignment="Top" Height="50" Width="67"/>
+        <Button Content="5" HorizontalAlignment="Left" Margin="80,122,0,0" VerticalAlignment="Top" Height="50" Width="67"/>
+        <Button Content="8" HorizontalAlignment="Left" Margin="80,177,0,0" VerticalAlignment="Top" Height="50" Width="67"/>
+        <Button Content="3" HorizontalAlignment="Left" Margin="154,67,0,0" VerticalAlignment="Top" Height="50" Width="67"/>
+        <Button Content="6" HorizontalAlignment="Left" Margin="154,122,0,0" VerticalAlignment="Top" Height="50" Width="67"/>
+        <Button Content="9" HorizontalAlignment="Left" Margin="154,177,0,0" VerticalAlignment="Top" Height="50" Width="67"/>
+        <Button Content="-" HorizontalAlignment="Left" Margin="154,232,0,0" VerticalAlignment="Top" Height="50" Width="67" FontSize="16"/>
+        <Button Content="*" HorizontalAlignment="Left" Margin="226,67,0,0" VerticalAlignment="Top" Height="50" Width="144" FontSize="16"/>
+        <Button Content="/" HorizontalAlignment="Left" Margin="226,122,0,0" VerticalAlignment="Top" Height="50" Width="144" FontSize="16"/>
+        <Button Content="^" HorizontalAlignment="Left" Margin="226,177,0,0" VerticalAlignment="Top" Height="50" Width="72" FontSize="16"/>
+        <Button Content="Log10" HorizontalAlignment="Left" Margin="226,232,0,0" VerticalAlignment="Top" Height="50" Width="144" FontSize="16"/>
+        <Button Content="sqrt(x)" HorizontalAlignment="Left" Margin="7,287,0,0" VerticalAlignment="Top" Height="50" Width="67" FontSize="16"/>
+        <Button Content="AC" HorizontalAlignment="Left" Margin="154,287,0,0" VerticalAlignment="Top" Height="50" Width="144" FontSize="16"/>
+        <Button Content="=" HorizontalAlignment="Left" Margin="597,287,0,0" VerticalAlignment="Top" Height="50" Width="221" FontSize="20" Background="DarkOrange"/>
+        <Button Content="Cos(x)" HorizontalAlignment="Left" Margin="376,67,0,0" VerticalAlignment="Top" Height="50" Width="144" FontSize="16"/>
+        <Button Content="Sin(x)" HorizontalAlignment="Left" Margin="376,122,0,0" VerticalAlignment="Top" Height="50" Width="144" FontSize="16"/>
+        <Button Content="Tg(x)" HorizontalAlignment="Left" Margin="376,177,0,0" VerticalAlignment="Top" Height="50" Width="144" FontSize="16"/>
+        <Button Content="Ctg(x)" HorizontalAlignment="Left" Margin="376,232,0,0" VerticalAlignment="Top" Height="50" Width="144" FontSize="16"/>
+        <Button Content="Sum" HorizontalAlignment="Left" Margin="525,67,0,0" VerticalAlignment="Top" Height="50" Width="144" FontSize="16" Opacity="0.5"/>
+        <Button Content="x/Dx" HorizontalAlignment="Left" Margin="525,122,0,0" VerticalAlignment="Top" Height="50" Width="144" FontSize="20" Background="DarkOrange"/>
+        <Button Content="!" HorizontalAlignment="Left" Margin="525,177,0,0" VerticalAlignment="Top" Height="50" Width="144" FontSize="16"/>
+        <Button Content="asin(x)" HorizontalAlignment="Left" Margin="525,232,0,0" VerticalAlignment="Top" Height="50" Width="144" FontSize="16"/>
+        <Button Content="acos(x)" HorizontalAlignment="Left" Margin="675,67,0,0" VerticalAlignment="Top" Height="50" Width="144" FontSize="16"/>
+        <Button Content="atg(x)" HorizontalAlignment="Left" Margin="675,122,0,0" VerticalAlignment="Top" Height="50" Width="144" FontSize="16"/>
+        <Button Content="actg(x)" HorizontalAlignment="Left" Margin="675,177,0,0" VerticalAlignment="Top" Height="50" Width="144" FontSize="16"/>
+        <Button Content="exp" HorizontalAlignment="Left" Margin="675,232,0,0" VerticalAlignment="Top" Height="50" Width="144" FontSize="16"/>
         <TextBlock x:Name="TB" Background="LightGray" HorizontalAlignment="Left" Margin="7,11,0,0" Text="{Binding TextBlock, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top" Height="51" Width="811" FontSize="20"/>
-        <Button Content="0" HorizontalAlignment="Left" Margin="62,232,0,0" VerticalAlignment="Top" Height="50" Width="50" FontSize="16"/>
-        <Button Content="." HorizontalAlignment="Left" Margin="62,287,0,0" VerticalAlignment="Top" Height="50" Width="25" FontSize="16"/>
-        <Button Content="(" HorizontalAlignment="Left" Margin="229,287,0,0" VerticalAlignment="Top" Height="50" Width="50" FontSize="16"/>
-        <Button Content=")" HorizontalAlignment="Left" Margin="283,287,0,0" VerticalAlignment="Top" Height="50" Width="50" FontSize="16"/>
-        <Button Content="Pi" HorizontalAlignment="Left" Margin="337,287,0,0" VerticalAlignment="Top" Height="50" Width="54" FontSize="16"/>
-        <Button Content="," HorizontalAlignment="Left" Margin="87,287,0,0" VerticalAlignment="Top" Height="50" Width="25" FontSize="16"/>
-        <Label Content="Для написания выражения" HorizontalAlignment="Left" Margin="622,67,0,0" VerticalAlignment="Top" Width="196" FontSize="14" Height="30"/>
-        <Button Content ="x" FontSize="16" Margin="622,178,167,153" />
-        <Button Content ="Cos" FontSize="16" Margin="674,122,116,208" />
-        <Button Content ="Sin" FontSize="16" Margin="622,122,167,208" />
-        <Button Content ="Tg" FontSize="16" Margin="725,178,18,152" />
-        <Button Content ="Ctg" FontSize="16" Margin="725,122,18,208" />
-        <Button Content ="Log" FontSize="16" Margin="725,232,18,98" />
-        <Button Content ="Ln" FontSize="16" Margin="622,233,167,98" />
-        <Button Content ="e" FontSize="16" Margin="674,232,116,98" />
-        <Button Content ="( x )" FontSize="16" Margin="674,178,116,153"/>
-        <Button Content="Устал"  FontSize="18" Margin="622,287,18,43" />
+        <Button Content="0" HorizontalAlignment="Left" Margin="80,232,0,0" VerticalAlignment="Top" Height="50" Width="67" FontSize="16"/>
+        <Button Content="." HorizontalAlignment="Left" Margin="80,287,0,0" VerticalAlignment="Top" Height="50" Width="34" FontSize="16"/>
+        <Button Content="(" HorizontalAlignment="Left" Margin="303,287,0,0" VerticalAlignment="Top" Height="50" Width="67" FontSize="16"/>
+        <Button Content=")" HorizontalAlignment="Left" Margin="376,287,0,0" VerticalAlignment="Top" Height="50" Width="66" FontSize="16"/>
+        <Button Content="Pi" HorizontalAlignment="Left" Margin="448,287,0,0" VerticalAlignment="Top" Height="50" Width="72" FontSize="16"/>
+        <Button Content="," HorizontalAlignment="Left" Margin="114,287,0,0" VerticalAlignment="Top" Height="50" Width="33" FontSize="16"/>
+        <Button Content="x" HorizontalAlignment="Left" Margin="525,287,0,0" VerticalAlignment="Top" Height="50" Width="67" FontSize="16"/>
+        <Button Content="e" HorizontalAlignment="Left" Margin="303,177,0,0" VerticalAlignment="Top" Height="50" Width="67" FontSize="16"/>
     </Grid>
 </Window>

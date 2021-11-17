@@ -18,6 +18,65 @@ namespace Calculator.Models
                 return n * Fact(n - 1);
         }
 
+        public static string TrigonomCompute(string expression)
+        {
+            Regex num = new Regex(@"(\W?)(\d+\,*\d*)(\^)(\d+)");
+            Regex tgAsCtgAsAtg = new Regex(@"(\W?)(\d+\,*\d*)([a-z]*tg).(\d+\,*\d*).\^(\d+)");
+            Regex cosAsAcos = new Regex(@"(\W?)(\d+\,*\d*)([a-z]*cos).(\d+\,*\d*).\^(\d+)");
+            Regex sinAsAsin = new Regex(@"(\W?)(\d+\,*\d*)([a-z]*sin).(\d+\,*\d*).\^(\d+)");
+            Regex root = new Regex(@"(\W?)(\d+\,*\d*)(\w*sqrt).(\d+\,*\d*).");
+            Regex fact = new Regex(@"(\W?)(\d+)(\w*!)");
+            Regex log = new Regex(@"(\W?)(\d+\,*\d*)([a-z]*log10).(\d+\,*\d*).\^(\d+)");
+            Match matchNum = num.Match(expression);
+            Match matchTg = tgAsCtgAsAtg.Match(expression);
+            Match matchCos = cosAsAcos.Match(expression);
+            Match matchSin = sinAsAsin.Match(expression);
+            Match matchRoot = root.Match(expression);
+            Match matchFact = fact.Match(expression);
+            Match matchLog = log.Match(expression);
+            expression = "";
+            if(matchNum.Groups[3].Value == "^")
+            {
+                expression += $"{matchNum.Groups[1].Value}{Math.Pow(double.Parse(matchNum.Groups[2].Value), double.Parse(matchNum.Groups[4].Value))}";
+            }
+            if(matchTg.Groups[3].Value == "tg")
+            {
+                expression += $"{matchTg.Groups[1].Value}{double.Parse(matchTg.Groups[2].Value) * Math.Pow(Math.Tan(double.Parse(matchTg.Groups[4].Value)),double.Parse(matchTg.Groups[5].Value))}";
+            }
+            if(matchTg.Groups[3].Value == "atg")
+            {
+                expression += $"{matchTg.Groups[1].Value}{double.Parse(matchTg.Groups[2].Value) * Math.Pow(Math.Atan(double.Parse(matchTg.Groups[4].Value)), double.Parse(matchTg.Groups[5].Value))}";
+            }
+            if(matchCos.Groups[3].Value == "cos")
+            {
+                expression += $"{matchCos.Groups[1].Value}{double.Parse(matchCos.Groups[2].Value) * Math.Pow(Math.Cos(double.Parse(matchCos.Groups[4].Value)), double.Parse(matchCos.Groups[5].Value))}";
+            }
+            if (matchCos.Groups[3].Value == "acos")
+            {
+                expression += $"{matchCos.Groups[1].Value}{double.Parse(matchCos.Groups[2].Value) * Math.Pow(Math.Acos(double.Parse(matchCos.Groups[4].Value)), double.Parse(matchCos.Groups[5].Value))}";
+            }
+            if (matchCos.Groups[3].Value == "sin")
+            {
+                expression += $"{matchSin.Groups[1].Value}{double.Parse(matchSin.Groups[2].Value) * Math.Pow(Math.Sin(double.Parse(matchSin.Groups[4].Value)), double.Parse(matchSin.Groups[5].Value))}";
+            }
+            if (matchCos.Groups[3].Value == "asin")
+            {
+                expression += $"{matchSin.Groups[1].Value}{double.Parse(matchSin.Groups[2].Value)*Math.Pow(Math.Asin(double.Parse(matchSin.Groups[4].Value)), double.Parse(matchSin.Groups[5].Value))}";
+            }
+            if(matchRoot.Groups[3].Value == "sqrt")
+            {
+                expression += $"{matchRoot.Groups[1].Value}{double.Parse(matchRoot.Groups[2].Value)*Math.Sqrt(double.Parse(matchRoot.Groups[4].Value))}";
+            }
+            if(matchFact.Groups[3].Value == "!")
+            {
+                expression += $"{matchFact.Groups[1].Value}{Fact(long.Parse(matchFact.Groups[2].Value))}";
+            }
+            if(matchLog.Groups[3].Value == "log10")
+            {
+                expression += $"{matchLog.Groups[1].Value}{Math.Pow(Math.Log10(double.Parse(matchLog.Groups[4].Value)),double.Parse(matchLog.Groups[5].Value))}";
+            }
+            return expression;
+        }
         public static string Derivative(string expression)
         {
             double result = 0;

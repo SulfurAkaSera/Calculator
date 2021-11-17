@@ -34,6 +34,7 @@ namespace Calculator
         private void Do(object sender, RoutedEventArgs e)
         {
             var but = (Button)sender;
+            #region Switch
             switch (but.Content)
             {
                 case "1":
@@ -81,8 +82,8 @@ namespace Calculator
                 case "^":
                     ViewModel.TextBlock += "^";
                     break;
-                case "^1/2":
-                    ViewModel.TextBlock = Math.Sqrt(double.Parse(ViewModel.TextBlock)).ToString();
+                case "sqrt(x)":
+                    ViewModel.TextBlock += "sqrt";
                     break;
                 case ".":
                     ViewModel.TextBlock += ".";
@@ -94,67 +95,43 @@ namespace Calculator
                     ViewModel.TextBlock = "";
                     break;
                 case "Log10":
-                    ViewModel.TextBlock = Math.Log10(double.Parse(ViewModel.TextBlock)).ToString();
-                    break;
-                case "Log":
-                    ViewModel.TextBlock += "log";
-                    break;
-                case "( x )":
-                    ViewModel.TextBlock += "(x)";
-                    break;
-                case "Cos":
-                    ViewModel.TextBlock += "cos";
-                    break;
-                case "Sin":
-                    ViewModel.TextBlock += "sin";
-                    break;
-                case "Ln":
-                    ViewModel.TextBlock += "ln";
-                    break;
-                case "Tg":
-                    ViewModel.TextBlock += "tg";
-                    break;
-                case "Ctg":
-                    ViewModel.TextBlock += "ctg";
+                    ViewModel.TextBlock += "log10";
                     break;
                 case "e":
                     ViewModel.TextBlock += "e";
-                    break;
-                case "Устал":
-                    MW.Close();
                     break;
                 case "x":
                     ViewModel.TextBlock += "x";
                     break;
                 case "Cos(x)":
-                    ViewModel.TextBlock = Math.Cos(double.Parse(ViewModel.TextBlock)).ToString();
+                    ViewModel.TextBlock += "cos";
                     break;
                 case "Sin(x)":
-                    ViewModel.TextBlock = Math.Sin(double.Parse(ViewModel.TextBlock)).ToString();
+                    ViewModel.TextBlock += "sin";
                     break;
                 case "Tg(x)":
-                    ViewModel.TextBlock = Math.Tan(double.Parse(ViewModel.TextBlock)).ToString();
+                    ViewModel.TextBlock += "tg";
                     break;
                 case "Ctg(x)":
-                    ViewModel.TextBlock = Math.Log2(double.Parse(ViewModel.TextBlock)).ToString();
+                    ViewModel.TextBlock += "ctg";
                     break;
                 case "x/Dx":
-                    ViewModel.TextBlock = Operation.Derivative(ViewModel.TextBlock);;
+                    ViewModel.TextBlock = Operation.Derivative(ViewModel.TextBlock);
                     break;
                 case "Sum":
-
+                    //Coming soon
                     break;
                 case "!":
-                    ViewModel.TextBlock = Operation.Fact(long.Parse(ViewModel.TextBlock)).ToString();
+                    ViewModel.TextBlock += "!";
                     break;
                 case "asin(x)":
-                    ViewModel.TextBlock = Math.Asin(double.Parse(ViewModel.TextBlock)).ToString();
+                    ViewModel.TextBlock += "asin";
                     break;
                 case "acos(x)":
-                    ViewModel.TextBlock = Math.Acos(double.Parse(ViewModel.TextBlock)).ToString();
+                    ViewModel.TextBlock += "acos";
                     break;
                 case "atg(x)":
-                    ViewModel.TextBlock = Math.Atan(double.Parse(ViewModel.TextBlock)).ToString();
+                    ViewModel.TextBlock += "atg";
                     break;
                 case "actg(x)":
                     Thread.Sleep(2000);
@@ -173,19 +150,18 @@ namespace Calculator
                     ViewModel.TextBlock += 3.14;
                     break;
                 case "=":
-                    Regex regex = new Regex(@"(^.*[0-9]*)(\D)([0-9]*)");
-                    Match match = regex.Match(ViewModel.TextBlock);
-                    if(match.Groups[2].Value == "^")
-                    {
-                        ViewModel.TextBlock = Math.Pow(double.Parse(match.Groups[1].Value), double.Parse(match.Groups[3].Value)).ToString();
-                    }
-                    else
-                    {
-                        DataTable dataTable = new DataTable();
+                    DataTable dataTable = new DataTable();
+                    try
+                    {   
                         ViewModel.TextBlock = dataTable.Compute(ViewModel.TextBlock, null).ToString();
+                    }
+                    catch
+                    {
+                        ViewModel.TextBlock = Operation.TrigonomCompute(ViewModel.TextBlock).ToString();
                     }
                     break;
             }
+            #endregion
         }
     }
 }

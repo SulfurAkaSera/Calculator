@@ -3,6 +3,7 @@ using System.Runtime.CompilerServices;
 
 namespace Calculator.ViewModel
 {
+    //Ninja Turtles were here!
     class MViewModel : INotifyPropertyChanged
     {
         private string _textblock;
